@@ -1,0 +1,17 @@
+C:\Users\Admin\source\repos\YT-DL\bin\Debug\net6.0-windows\YT-DL.exe
+C:\Users\Admin\source\repos\YT-DL\bin\Debug\net6.0-windows\YT-DL.deps.json
+C:\Users\Admin\source\repos\YT-DL\bin\Debug\net6.0-windows\YT-DL.runtimeconfig.json
+C:\Users\Admin\source\repos\YT-DL\bin\Debug\net6.0-windows\YT-DL.dll
+C:\Users\Admin\source\repos\YT-DL\bin\Debug\net6.0-windows\YT-DL.pdb
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\YT-DL.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\YT_DL.Form1.resources
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\YT-DL.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\YT-DL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\YT-DL.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\YT-DL.AssemblyInfo.cs
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\YT-DL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\YT-DL.dll
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\refint\YT-DL.dll
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\YT-DL.pdb
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\YT-DL.genruntimeconfig.cache
+C:\Users\Admin\source\repos\YT-DL\obj\Debug\net6.0-windows\ref\YT-DL.dll
