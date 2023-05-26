@@ -3,6 +3,7 @@ namespace YT_DL
 {
     using System;
     using System.Diagnostics;
+    using System.Windows.Forms;
 
     public partial class Form1 : Form
     {
@@ -30,8 +31,16 @@ namespace YT_DL
 
             if (result == DialogResult.OK)
             {
+                string command;
                 string selectedFolder = folderBrowserDialog.SelectedPath;
-                string command = "yt-dlp -f bestaudio -x --audio-format mp3 " + textBox1.Text;
+                if (checkBox1.Checked == true)
+                {
+                    command = "yt-dlp -f bestaudio -x --audio-format mp3 --sponsorblock-remove all " + textBox1.Text;
+                }
+                else
+                {
+                    command = "yt-dlp -f bestaudio -x --audio-format mp3 " + textBox1.Text;
+                }
                 Process process = new Process();
                 process.StartInfo.WorkingDirectory = selectedFolder;
                 process.StartInfo.FileName = "cmd.exe";
@@ -50,6 +59,51 @@ namespace YT_DL
                 process.Dispose();
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string command = "yt-dlp -F " + textBox1.Text;
+            Process process = new Process();
+            process.StartInfo.FileName = "cmd.exe";
+            process.StartInfo.Arguments = "/c " + command;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.CreateNoWindow = true; // Set to hide the command prompt window
+            process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            process.Start();
+
+            string output = process.StandardOutput.ReadToEnd();
+            process.WaitForExit();
+
+            Console.WriteLine("Command Output:\n" + output);
+            MessageBox.Show(output, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            process.Dispose();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string command = "pip3 install --upgrade yt-dlp";
+            Process process = new Process();
+            process.StartInfo.FileName = "cmd.exe";
+            process.StartInfo.Arguments = "/c " + command;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.CreateNoWindow = true; // Set to hide the command prompt window
+            process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            process.Start();
+
+            string output = process.StandardOutput.ReadToEnd();
+            process.WaitForExit();
+
+            Console.WriteLine("Command Output:\n" + output);
+            MessageBox.Show(output, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            process.Dispose();
         }
     }
 }
