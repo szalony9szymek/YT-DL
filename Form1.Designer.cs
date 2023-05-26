@@ -72,7 +72,6 @@
             checkBox1.TabIndex = 3;
             checkBox1.Text = "Remove Music Video";
             checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // button3
             // 
@@ -82,6 +81,7 @@
             button3.TabIndex = 4;
             button3.Text = "Download as MP4 (HQ)";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
