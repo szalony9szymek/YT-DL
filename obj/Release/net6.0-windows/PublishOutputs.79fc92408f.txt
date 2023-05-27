@@ -1,0 +1,5 @@
+C:\Users\Admin\source\repos\YT-DL\bin\Release\net6.0-windows\publish\YT-DL.exe
+C:\Users\Admin\source\repos\YT-DL\bin\Release\net6.0-windows\publish\YT-DL.dll
+C:\Users\Admin\source\repos\YT-DL\bin\Release\net6.0-windows\publish\YT-DL.deps.json
+C:\Users\Admin\source\repos\YT-DL\bin\Release\net6.0-windows\publish\YT-DL.runtimeconfig.json
+C:\Users\Admin\source\repos\YT-DL\bin\Release\net6.0-windows\publish\YT-DL.pdb

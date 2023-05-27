@@ -1,0 +1,2 @@
+C:\Users\Admin\source\repos\YT-DL\bin\Release\net6.0-windows\publish\win-x86\YT-DL.pdb
+C:\Users\Admin\source\repos\YT-DL\bin\Release\net6.0-windows\publish\win-x86\YT-DL.exe

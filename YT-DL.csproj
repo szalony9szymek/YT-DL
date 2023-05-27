@@ -7,6 +7,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Company>szalony9szymek</Company>
+    <Authors>belemnoid</Authors>
+    <PackageProjectUrl>https://github.com/szalony9szymek/YT-DL</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/szalony9szymek/YT-DL</RepositoryUrl>
+    <SignAssembly>False</SignAssembly>
   </PropertyGroup>
 
 </Project>

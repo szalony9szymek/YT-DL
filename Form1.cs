@@ -121,7 +121,7 @@ namespace YT_DL
             });
 
             label1.Hide();
-            if (output != null) { output = "Internal Error #2"; }
+            if (string.IsNullOrEmpty(output)) { output = "Internal Error #2"; }
             MessageBox.Show(output, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

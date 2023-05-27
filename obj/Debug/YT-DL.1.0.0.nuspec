@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>YT-DL</id>
+    <version>1.0.0</version>
+    <authors>belemnoid</authors>
+    <projectUrl>https://github.com/szalony9szymek/YT-DL</projectUrl>
+    <description>Package Description</description>
+    <repository url="https://github.com/szalony9szymek/YT-DL" />
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\Admin\source\repos\YT-DL\bin\Debug\net6.0-windows\YT-DL.runtimeconfig.json" target="lib\net6.0-windows7.0\YT-DL.runtimeconfig.json" />
+    <file src="C:\Users\Admin\source\repos\YT-DL\bin\Debug\net6.0-windows\YT-DL.dll" target="lib\net6.0-windows7.0\YT-DL.dll" />
+  </files>
+</package>
