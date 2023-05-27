@@ -34,6 +34,7 @@
             checkBox1 = new CheckBox();
             button3 = new Button();
             button4 = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -93,11 +94,22 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 45F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(3, 360);
+            label1.Name = "label1";
+            label1.Size = new Size(794, 81);
+            label1.TabIndex = 6;
+            label1.Text = "yt-dlp is running, please wait";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(checkBox1);
@@ -120,5 +132,6 @@
         private CheckBox checkBox1;
         private Button button3;
         private Button button4;
+        private Label label1;
     }
 }

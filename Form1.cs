@@ -13,6 +13,7 @@ namespace YT_DL
         {
             InitializeComponent();
             MaximizeBox = false;
+            label1.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -95,9 +96,11 @@ namespace YT_DL
                     command = "yt-dlp -f bestaudio -x --audio-format mp3 --embed-thumbnail --no-mtime " + textBox1.Text;
                     break;
                 default:
-                    command = "echo Internal Error";
+                    command = "echo Internal Error #1";
                     break;
             }
+            label1.Show();
+            string output = "";
             await Task.Run(() =>
             {
                 Process process = new Process();
@@ -109,17 +112,17 @@ namespace YT_DL
                 process.StartInfo.CreateNoWindow = true; // Set to hide the command prompt window
                 process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
 
-
-
                 process.Start();
 
-                string output = process.StandardOutput.ReadToEnd();
+                output = process.StandardOutput.ReadToEnd();
                 process.WaitForExit();
 
-                MessageBox.Show(output, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 process.Dispose();
             });
 
+            label1.Hide();
+            if (output != null) { output = "Internal Error #2"; }
+            MessageBox.Show(output, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
