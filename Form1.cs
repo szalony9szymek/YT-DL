@@ -23,6 +23,7 @@ namespace YT_DL
 
         private void button1_Click(object sender, EventArgs e)
         {
+            label2.Focus();
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
 
             // Set the initial directory (optional)
@@ -53,18 +54,21 @@ namespace YT_DL
 
         private void button2_Click(object sender, EventArgs e)
         {
+            label2.Focus();
             string selectedFolder = "C:\\";
             async(selectedFolder, "listq");
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            label2.Focus();
             string selectedFolder = "C:\\";
             async(selectedFolder, "upgrade");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            label2.Focus();
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
 
             // Set the initial directory (optional)
@@ -100,9 +104,12 @@ namespace YT_DL
                     break;
             }
             label1.Show();
-            string output = "";
             await Task.Run(() =>
             {
+                if (!String.IsNullOrEmpty(textBox2.Text))
+                {
+                    AppendToTextBox2(Environment.NewLine + Environment.NewLine + Environment.NewLine);
+                }
                 Process process = new Process();
                 process.StartInfo.WorkingDirectory = selectedFolder;
                 process.StartInfo.FileName = "cmd.exe";
@@ -111,18 +118,34 @@ namespace YT_DL
                 process.StartInfo.RedirectStandardOutput = true;
                 process.StartInfo.CreateNoWindow = true; // Set to hide the command prompt window
                 process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-
+                process.OutputDataReceived += (sender, e) =>
+                {
+                    if (!string.IsNullOrEmpty(e.Data))
+                    {
+                        // Append the output to textBox2
+                        AppendToTextBox2(e.Data);
+                    }
+                };
                 process.Start();
 
-                output = process.StandardOutput.ReadToEnd();
+                process.BeginOutputReadLine();
                 process.WaitForExit();
 
                 process.Dispose();
             });
 
             label1.Hide();
-            if (string.IsNullOrEmpty(output)) { output = "Internal Error #2"; }
-            MessageBox.Show(output, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        void AppendToTextBox2(string output)
+        {
+            if (textBox2.InvokeRequired)
+            {
+                textBox2.Invoke(new Action<string>(AppendToTextBox2), output);
+            }
+            else
+            {
+                textBox2.AppendText(output + Environment.NewLine);
+            }
         }
     }
 }

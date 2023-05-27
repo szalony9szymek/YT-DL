@@ -35,6 +35,8 @@
             button3 = new Button();
             button4 = new Button();
             label1 = new Label();
+            textBox2 = new TextBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -86,7 +88,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(675, 12);
+            button4.Location = new Point(740, 12);
             button4.Name = "button4";
             button4.Size = new Size(113, 23);
             button4.TabIndex = 5;
@@ -96,19 +98,38 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 45F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(3, 360);
+            label1.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(794, 81);
+            label1.Size = new Size(841, 154);
             label1.TabIndex = 6;
             label1.Text = "yt-dlp is running, please wait";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(190, 68);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.ScrollBars = ScrollBars.Both;
+            textBox2.Size = new Size(663, 301);
+            textBox2.TabIndex = 7;
+            textBox2.WordWrap = false;
+            // 
+            // label2
+            // 
+            label2.Location = new Point(64, 402);
+            label2.Name = "label2";
+            label2.Size = new Size(100, 23);
+            label2.TabIndex = 8;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(865, 450);
+            Controls.Add(label2);
+            Controls.Add(textBox2);
             Controls.Add(label1);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -118,7 +139,7 @@
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
-            Text = "Form1";
+            Text = "YT-DL by belemnoid";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -133,5 +154,7 @@
         private Button button3;
         private Button button4;
         private Label label1;
+        private TextBox textBox2;
+        private Label label2;
     }
 }
