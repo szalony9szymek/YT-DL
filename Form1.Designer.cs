@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
             textBox1 = new TextBox();
             button2 = new Button();
@@ -78,9 +79,9 @@
             // 
             // button3
             // 
-            button3.Location = new Point(19, 99);
+            button3.Location = new Point(16, 99);
             button3.Name = "button3";
-            button3.Size = new Size(165, 50);
+            button3.Size = new Size(168, 50);
             button3.TabIndex = 4;
             button3.Text = "Download as MP4 (HQ)";
             button3.UseVisualStyleBackColor = true;
@@ -138,6 +139,7 @@
             Controls.Add(textBox1);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "YT-DL by belemnoid";
             Load += Form1_Load;

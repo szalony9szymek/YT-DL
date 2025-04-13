@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("szalony9szymek")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+859d6368bd023a6ed04deb94fa42cb8b487fd2f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("YT-DL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YT-DL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

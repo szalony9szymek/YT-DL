@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sB4kSm3KT0yShhDf01H1z03y0Gvw6bVkSv1/X2JLS1iGRYK7q+dD4Qrd8YVzO0+P9nWK7SBZHBpl/vgvyhwtvA==",
+  "dgSpecHash": "ctuC3xz9QTiRu9YmsnSoQHTKSgQc8M00ah1KRrrmq6lf7kUwLkHbZBqgCiE4faGcrX/dhpOi4HAcH/HcNsaQkA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\YT-DL\\YT-DL.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23211.1\\microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23211.1\\microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512"
+  ],
   "logs": []
 }
