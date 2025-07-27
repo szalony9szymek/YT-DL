@@ -38,6 +38,7 @@
             label1 = new Label();
             textBox2 = new TextBox();
             label2 = new Label();
+            checkBox2 = new CheckBox();
             SuspendLayout();
             // 
             // button1
@@ -70,11 +71,11 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(190, 43);
+            checkBox1.Location = new Point(189, 43);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(137, 19);
+            checkBox1.Size = new Size(191, 19);
             checkBox1.TabIndex = 3;
-            checkBox1.Text = "Remove Music Video";
+            checkBox1.Text = "Remove Fluff (Music Video etc)";
             checkBox1.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -102,7 +103,7 @@
             label1.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(841, 154);
+            label1.Size = new Size(841, 256);
             label1.TabIndex = 6;
             label1.Text = "yt-dlp is running, please wait";
             // 
@@ -124,14 +125,26 @@
             label2.Size = new Size(100, 23);
             label2.TabIndex = 8;
             // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(386, 43);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(129, 19);
+            checkBox2.TabIndex = 9;
+            checkBox2.Text = "Don't use metadata";
+            checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(865, 450);
-            Controls.Add(label2);
             Controls.Add(textBox2);
             Controls.Add(label1);
+            Controls.Add(checkBox2);
+            Controls.Add(label2);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(checkBox1);
@@ -158,5 +171,6 @@
         private Label label1;
         private TextBox textBox2;
         private Label label2;
+        private CheckBox checkBox2;
     }
 }

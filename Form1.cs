@@ -35,19 +35,19 @@ namespace YT_DL
             if (result == DialogResult.OK)
             {
                 //string command;
-                string mode;
+                //string mode;
                 string selectedFolder = folderBrowserDialog.SelectedPath;
-                if (checkBox1.Checked == true)
-                {
-                    /*command = "yt-dlp -f bestaudio -x --audio-format mp3 --sponsorblock-remove all --embed-thumbnail --no-mtime " + textBox1.Text;*/
-                    mode = "mp3novideo";
-                }
-                else
-                {
-                    //command = "yt-dlp -f bestaudio -x --audio-format mp3 --embed-thumbnail --no-mtime " + textBox1.Text;
-                    mode = "mp3video";
-                }
-                async(selectedFolder, mode);
+                //if (checkBox1.Checked == true)
+                //{
+                //    /*command = "yt-dlp -f bestaudio -x --audio-format mp3 --sponsorblock-remove all --embed-thumbnail --no-mtime " + textBox1.Text;*/
+                //    mode = "mp3novideo";
+                //}
+                //else
+                //{
+                //    //command = "yt-dlp -f bestaudio -x --audio-format mp3 --embed-thumbnail --no-mtime " + textBox1.Text;
+                //    mode = "mp3video";
+                //}
+                async(selectedFolder, "mp3", checkBox1.Checked, checkBox2.Checked);
 
             }
         }
@@ -56,14 +56,14 @@ namespace YT_DL
         {
             label2.Focus();
             string selectedFolder = "C:\\";
-            async(selectedFolder, "listq");
+            async(selectedFolder, "listq", false, false);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             label2.Focus();
             string selectedFolder = "C:\\";
-            async(selectedFolder, "upgrade");
+            async(selectedFolder, "upgrade", false, false);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -77,9 +77,9 @@ namespace YT_DL
             // Show the folder picker dialog
             DialogResult result = folderBrowserDialog.ShowDialog();
             string selectedFolder = folderBrowserDialog.SelectedPath;
-            async(selectedFolder, "hqmp4");
+            async(selectedFolder, "hqmp4", false, false);
         }
-        async void async(string selectedFolder, string mode)
+        async void async(string selectedFolder, string mode, bool rmvideo, bool chname)
         {
             string command = "";
             switch (mode)
@@ -93,11 +93,12 @@ namespace YT_DL
                 case "listq":
                     command = "yt-dlp -F " + textBox1.Text;
                     break;
-                case "mp3novideo":
-                    command = "yt-dlp -f bestaudio -x --audio-format mp3 --sponsorblock-remove all --embed-thumbnail --no-mtime " + textBox1.Text;
-                    break;
-                case "mp3video":
-                    command = "yt-dlp -f bestaudio -x --audio-format mp3 --embed-thumbnail --no-mtime " + textBox1.Text;
+                case "mp3":
+                    command = "yt-dlp -f bestaudio -x --audio-format mp3 --embed-thumbnail --no-mtime";
+                    if (rmvideo) { command += " --sponsorblock - remove all "; }
+                    if (chname) { command += " -o \"%(channel)s - %(title)s.%(ext)s\" "; }
+                    else { command += " \"-o %(title)s.%(ext)s\" --embed-metadata --parse-metadata \"title:%(title)s\" --parse-metadata \"artist:%(uploader)s\" "; }
+                    command += textBox1.Text;
                     break;
                 default:
                     command = "echo Internal Error #1";
@@ -146,6 +147,11 @@ namespace YT_DL
             {
                 textBox2.AppendText(output + Environment.NewLine);
             }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
